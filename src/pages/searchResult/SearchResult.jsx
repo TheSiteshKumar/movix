@@ -1,10 +1,8 @@
-import React from 'react'
-import "./style.scss"
+import React from "react";
+import "./style.scss";
 
 function searchResult() {
-  return (
-    <div>searchResult</div>
-  )
+  return <div>searchResult</div>;
 }
 
-export default searchResult
+export default searchResult;
