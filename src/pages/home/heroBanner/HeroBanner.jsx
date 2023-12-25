@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import "./style.scss";
 import useFetch from "../../../hooks/useFetch";
@@ -9,6 +10,7 @@ function heroBanner() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
+  const { url } = useSelector((state) => state.home);
   const { data, loading } = useFetch("/movie/upcoming");
 
   useEffect(() => {
