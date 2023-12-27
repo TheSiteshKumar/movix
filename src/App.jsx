@@ -30,7 +30,7 @@ function App() {
         backdrop: res.images.secure_base_url + "original",
         poster: res.images.secure_base_url + "original",
         profle: res.images.secure_base_url + "original",
-      }
+      };
 
       dispatch(getApiConfigration(res));
     });
@@ -49,5 +49,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;
