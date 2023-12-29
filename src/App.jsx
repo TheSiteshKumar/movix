@@ -29,8 +29,8 @@ function App() {
       const url = {
         backdrop: res.images.secure_base_url + "original",
         poster: res.images.secure_base_url + "original",
-        profle: res.images.secure_base_url + "original",
-      }
+        profile: res.images.secure_base_url + "original",
+      };
 
       dispatch(getApiConfigration(url));
     });
@@ -48,6 +48,5 @@ function App() {
       <Footer />
     </BrowserRouter>
   );
-  
 }
 export default App;

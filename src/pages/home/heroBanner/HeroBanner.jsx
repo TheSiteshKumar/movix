@@ -5,6 +5,9 @@ import { useSelector } from "react-redux";
 import "./style.scss";
 import useFetch from "../../../hooks/useFetch";
 
+import Img from "../../../components/lazyLoadImage/Img";
+import ContentWrapper from "../../../components/contentWrapper/contentWrapper";
+
 function heroBanner() {
   const [background, setBackground] = useState("");
   const [query, setQuery] = useState("");
@@ -14,7 +17,9 @@ function heroBanner() {
   const { data, loading } = useFetch("/movie/upcoming");
 
   useEffect(() => {
-    const bg = data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
+    const bg =
+      url.backdrop +
+      data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
     setBackground(bg);
   }, [data]);
 
@@ -25,10 +30,19 @@ function heroBanner() {
   };
   return (
     <div className="heroBanner">
-      <div className="wrapper">
+
+      {!loading && (
+        <div className="backdrop-img">
+          <Img src={background} />
+        </div>
+      )}
+
+      <div className="opacity-layer"></div>
+
+      <ContentWrapper>
         <div className="heroBannerContent">
           <span className="title">Welcome.</span>
-          <span className="title">
+          <span className="subTitle">
             Millions of movies, TV shows and people to discover. Explore now.
           </span>
           <div className="searchInput">
@@ -41,7 +55,7 @@ function heroBanner() {
             <button>Search</button>
           </div>
         </div>
-      </div>
+      </ContentWrapper>
     </div>
   );
 }
