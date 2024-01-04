@@ -30,7 +30,6 @@ function heroBanner() {
   };
   return (
     <div className="heroBanner">
-
       {!loading && (
         <div className="backdrop-img">
           <Img src={background} />
