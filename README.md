@@ -4,3 +4,4 @@
 02:58:08 footer completed
 03:22:08 Carousel Section - Switching Tabs 
 03:22:00 Carousel Section - Main Carousel Component 
+04:04:04 Genres Component
