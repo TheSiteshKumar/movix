@@ -6,3 +6,4 @@
 03:22:00 Carousel Section - Main Carousel Component 
 04:04:04 Genres Component
 04:12:00Carousel Section - Sliding Functionality 
+04:22:00 Homepage - Popular & Top Rated Section
