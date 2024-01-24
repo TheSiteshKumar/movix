@@ -7,4 +7,4 @@
 04:04:04 Genres Component
 04:12:00Carousel Section - Sliding Functionality 
 04:22:00 Homepage - Popular & Top Rated Section
-05:15:00 Details Page - Details Banner Section
+05:15:00 Details Page - Details Banner  Section
